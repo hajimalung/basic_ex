@@ -1,9 +1,8 @@
-<p>servers works!</p>
-<app-server></app-server>
 <div class="container">
-  <div class="table">
-    <div class="col">
-      <div class="row">1</div>
-    </div>
-  </div>
+  <button class="btn btn-primary" [disabled]="!allowNewServers">
+    Add Server
+  </button>
+  <app-server></app-server>
+  <app-server></app-server>
+  <app-server></app-server>
 </div>
