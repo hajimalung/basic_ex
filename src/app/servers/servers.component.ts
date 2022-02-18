@@ -6,6 +6,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServers = false;
+  serverName: string;
+  count;
+  //closure for counting
+  counter = function () {
+    this.count = 0;
+    return function () {
+      this.count++;
+      console.log(this.count);
+    };
+  }.bind(this)();
+
   constructor() {
     setTimeout(() => {
       this.allowNewServers = true;
@@ -13,4 +24,8 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  onServernameTyped(event: Event): void {
+    // console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
 }

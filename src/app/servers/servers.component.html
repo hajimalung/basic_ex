@@ -1,7 +1,17 @@
+<label for="server name">Server Name:</label>
+<input type="text" class="form-control" (input)="onServernameTyped($event)" />
+<kbd class="bg-primary">{{ serverName }}</kbd>
+<br />
+<br />
 <div class="container">
-  <button class="btn btn-primary" [disabled]="!allowNewServers">
+  <button
+    class="btn btn-primary"
+    [disabled]="!allowNewServers"
+    (click)="counter()"
+  >
     Add Server
   </button>
+  <kbd>{{ count }}</kbd>
   <app-server></app-server>
   <app-server></app-server>
   <app-server></app-server>
