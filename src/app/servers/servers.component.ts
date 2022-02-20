@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServers = false;
   serverName: string;
+  servMessage = '';
   count;
   //closure for counting
   counter = function () {
     this.count = 0;
     return function () {
       this.count++;
-      console.log(this.count);
+      this.servMessage = 'Server is created with the name : ' + this.serverName;
     };
   }.bind(this)();
 

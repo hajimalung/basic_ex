@@ -1,6 +1,19 @@
 <label for="server name">Server Name:</label>
-<input type="text" class="form-control" (input)="onServernameTyped($event)" />
-<kbd class="bg-primary">{{ serverName }}</kbd>
+<input
+  type="text"
+  for="property binding"
+  class="form-control"
+  placeholder="event binded"
+  (input)="onServernameTyped($event)"
+/>
+<input
+  type="text"
+  for="two-way binding"
+  placeholder="two way binded"
+  class="form-control"
+  [(ngModel)]="serverName"
+/>
+<!-- <kbd class="bg-primary">{{ serverName }}</kbd> -->
 <br />
 <br />
 <div class="container">
@@ -12,6 +25,7 @@
     Add Server
   </button>
   <kbd>{{ count }}</kbd>
+  <kbd class="bg-primary">{{ servMessage }}</kbd>
   <app-server></app-server>
   <app-server></app-server>
   <app-server></app-server>
