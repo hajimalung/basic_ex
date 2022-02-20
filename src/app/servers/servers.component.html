@@ -25,7 +25,12 @@
     Add Server
   </button>
   <kbd>{{ count }}</kbd>
-  <kbd class="bg-primary">{{ servMessage }}</kbd>
+  <br />
+  <!-- <kbd class="bg-primary">{{ servMessage }}</kbd> -->
+  <hr />
+  <kbd class="bg-primary" *ngIf="serverCreated">
+    with *ngIf {{ servMessage }}</kbd
+  >
   <app-server></app-server>
   <app-server></app-server>
   <app-server></app-server>
