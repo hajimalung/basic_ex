@@ -1,5 +1,9 @@
 <h5>
-  server with ID <kbd>{{ serverId }}</kbd> is
+  server with ID
+  <kbd [ngClass]="{ 'bg-primary': serverStatus === 'online' }">{{
+    serverId
+  }}</kbd>
+  is
   <kbd [ngStyle]="{ backgroundColor: getServerColor() }">{{
     serverStatus
   }}</kbd>
