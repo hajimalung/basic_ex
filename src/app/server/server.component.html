@@ -1,3 +1,6 @@
 <h5>
-  server with ID <kbd>{{ serverId }}</kbd> is <kbd>{{ serverStatus }}</kbd>
+  server with ID <kbd>{{ serverId }}</kbd> is
+  <kbd [ngStyle]="{ backgroundColor: getServerColor() }">{{
+    serverStatus
+  }}</kbd>
 </h5>
