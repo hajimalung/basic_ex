@@ -34,7 +34,5 @@
   <ng-template #noServer>
     <div class="p-3 mb-2 bg-danger text-white">No Server is created!</div>
   </ng-template>
-  <app-server></app-server>
-  <app-server></app-server>
-  <app-server></app-server>
+  <app-server *ngFor="let server of serversList"></app-server>
 </div>

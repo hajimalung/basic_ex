@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   serverName: string;
   serverCreated = false;
   servMessage = '';
+  serversList = ['defServer 1', 'defServer 2'];
   count;
   //closure for counting
   counter = function () {
@@ -16,6 +17,7 @@ export class ServersComponent implements OnInit {
     return function () {
       this.count++;
       this.serverCreated = true;
+      this.serversList.push(this.serverName);
       this.servMessage = 'Server is created with the name : ' + this.serverName;
     };
   }.bind(this)();
