@@ -28,9 +28,12 @@
   <br />
   <!-- <kbd class="bg-primary">{{ servMessage }}</kbd> -->
   <hr />
-  <kbd class="bg-primary" *ngIf="serverCreated">
+  <kbd class="bg-primary" *ngIf="serverCreated; else noServer">
     with *ngIf {{ servMessage }}</kbd
   >
+  <ng-template #noServer>
+    <div class="p-3 mb-2 bg-danger text-white">No Server is created!</div>
+  </ng-template>
   <app-server></app-server>
   <app-server></app-server>
   <app-server></app-server>
